@@ -3,4 +3,5 @@
     <string name="create_order">Create Order</string>
     <string name="create_order_title">Create Order</string>
     <string name="action_share">Share</string>
+    <string name="search">搜索</string>
 </resources>

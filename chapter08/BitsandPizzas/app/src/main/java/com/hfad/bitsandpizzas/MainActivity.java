@@ -1,16 +1,20 @@
 package com.hfad.bitsandpizzas;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.ShareActionProvider;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private ShareActionProvider shareActionProvider;
+    private SearchView mSearchView;
+    private TextView mTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        mTextView = (TextView) findViewById(R.id.text);
     }
 
     @Override
@@ -27,7 +32,24 @@ public class MainActivity extends AppCompatActivity {
         MenuItem menuItem = menu.findItem(R.id.action_share);
         shareActionProvider =
                 (ShareActionProvider) MenuItemCompat.getActionProvider(menuItem);
-        setShareActionIntent("Want to join me for pizza?");
+        setShareActionIntent("Want to join me for pizza?" + mTextView.getText().toString());
+        //TODO 类似于在Menu中使用SearchView，
+        //TODO 1.在menu文件中，需要指定类
+        //TODO 2.然后getActionView类型装换获取相应的
+//        MenuItem searchMenu = menu.findItem(R.id.search_view);
+//        mSearchView = (SearchView) searchMenu.getActionView();
+//        mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String query) {
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String newText) {
+//                mTextView.setText(newText);
+//                return true;
+//            }
+//        });
         return super.onCreateOptionsMenu(menu);
     }
 
