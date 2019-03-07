@@ -1,7 +1,9 @@
 package com.hfad.workout;
 
 /**
- * Created by davidg on 30/04/2017.
+ *
+ * @author davidg
+ * @date 30/04/2017
  */
 
 public class Workout {
@@ -33,6 +35,7 @@ public class Workout {
         return name;
     }
 
+    @Override
     public String toString() {
         return this.name;
     }

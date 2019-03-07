@@ -6,6 +6,9 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+/**
+ * @author Administrator
+ */
 public class MainActivity extends AppCompatActivity implements WorkoutListFragment.Listener {
 
     @Override
@@ -25,10 +28,9 @@ public class MainActivity extends AppCompatActivity implements WorkoutListFragme
             ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
             ft.addToBackStack(null);
             ft.commit();
-        }
-        else {
+        } else {
             Intent intent = new Intent(this, DetailActivity.class);
-            intent.putExtra(DetailActivity.EXTRA_WORKOUT_ID, (int)id);
+            intent.putExtra(DetailActivity.EXTRA_WORKOUT_ID, (int) id);
             startActivity(intent);
         }
     }

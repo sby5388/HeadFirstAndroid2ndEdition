@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
+ * @author Administrator
  */
 public class WorkoutDetailFragment extends Fragment {
     private long workoutId;
