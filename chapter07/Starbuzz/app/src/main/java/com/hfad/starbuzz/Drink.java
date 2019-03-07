@@ -5,7 +5,9 @@ package com.hfad.starbuzz;
  */
 
 public class Drink {
-    private String name; private String description; private int imageResourceId;
+    private String name;
+    private String description;
+    private int imageResourceId;
     //drinks is an array of Drinks
     public static final Drink[] drinks = {
             new Drink("Latte", "A couple of espresso shots with steamed milk", R.drawable.latte),
@@ -32,6 +34,7 @@ public class Drink {
         return imageResourceId;
     }
 
+    @Override
     public String toString() {
         return this.name;
     }

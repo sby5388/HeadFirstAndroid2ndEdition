@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * @author Administrator
+ */
 public class DrinkActivity extends Activity {
     public static final String EXTRA_DRINKID = "drinkId";
 
