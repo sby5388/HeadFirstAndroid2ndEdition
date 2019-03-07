@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class ReceiveMessageActivity extends Activity {
-    public static final String EXTRA_MESSAGE = "message";
+    public static final String EXTRA_MESSAGE = Intent.EXTRA_TEXT;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
