@@ -33,6 +33,7 @@ public class Workout {
         return name;
     }
 
+    @Override
     public String toString() {
         return this.name;
     }

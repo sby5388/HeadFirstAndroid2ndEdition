@@ -17,7 +17,7 @@ public class WorkoutDetailFragment extends Fragment {
     private long workoutId;
 
     @Override
-    public void onCreate(Bundle savedInstanceState){
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (savedInstanceState == null) {
             StopwatchFragment stopwatch = new StopwatchFragment();
