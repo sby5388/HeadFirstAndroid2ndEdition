@@ -8,6 +8,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+/**
+ * @author Administrator
+ */
 public class DrinkCategoryActivity extends Activity {
 
     @Override

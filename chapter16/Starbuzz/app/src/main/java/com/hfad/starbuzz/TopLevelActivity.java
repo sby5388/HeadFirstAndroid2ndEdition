@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+/**
+ * @author Administrator
+ */
 public class TopLevelActivity extends Activity {
 
     @Override

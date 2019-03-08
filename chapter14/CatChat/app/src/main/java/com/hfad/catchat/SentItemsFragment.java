@@ -7,6 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+/**
+ * @author Administrator
+ */
 public class SentItemsFragment extends Fragment {
 
     @Override

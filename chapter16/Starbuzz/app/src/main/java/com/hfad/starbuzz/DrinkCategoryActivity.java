@@ -14,6 +14,9 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
+/**
+ * @author Administrator
+ */
 public class DrinkCategoryActivity extends Activity {
 
     private SQLiteDatabase db;
@@ -67,5 +70,8 @@ public class DrinkCategoryActivity extends Activity {
         super.onDestroy();
         cursor.close();
         db.close();
+    }
+    private void temp(){
+
     }
 }

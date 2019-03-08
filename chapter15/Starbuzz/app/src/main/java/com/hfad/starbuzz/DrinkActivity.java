@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * @author Administrator
+ */
 public class DrinkActivity extends Activity {
     public static final String EXTRA_DRINKID = "drinkId";
 
@@ -22,6 +25,7 @@ public class DrinkActivity extends Activity {
         name.setText(drink.getName());
 
         //Populate the drink description
+        //Populate:填充
         TextView description = (TextView)findViewById(R.id.description);
         description.setText(drink.getDescription());
 
