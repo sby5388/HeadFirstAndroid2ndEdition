@@ -14,6 +14,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+/**
+ * @author Administrator
+ */
 public class MainActivity extends AppCompatActivity {
     private ShareActionProvider shareActionProvider;
 
@@ -66,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private class SectionsPagerAdapter extends FragmentPagerAdapter {
-        public SectionsPagerAdapter(FragmentManager fm) {
+        SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
@@ -86,6 +89,8 @@ public class MainActivity extends AppCompatActivity {
                     return new PastaFragment();
                 case 3:
                     return new StoresFragment();
+                default:
+                    break;
             }
             return null;
         }
@@ -101,6 +106,8 @@ public class MainActivity extends AppCompatActivity {
                     return getResources().getText(R.string.pasta_tab);
                 case 3:
                     return getResources().getText(R.string.store_tab);
+                default:
+                    break;
             }
             return null;
         }

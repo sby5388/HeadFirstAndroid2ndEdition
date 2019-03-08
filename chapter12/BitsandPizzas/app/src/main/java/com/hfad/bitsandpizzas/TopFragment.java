@@ -10,9 +10,6 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link TopFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link TopFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class TopFragment extends Fragment {
