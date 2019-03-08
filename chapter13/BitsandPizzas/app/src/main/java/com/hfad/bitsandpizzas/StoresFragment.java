@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
+ * @author Administrator
  */
 public class StoresFragment extends ListFragment {
     @Override

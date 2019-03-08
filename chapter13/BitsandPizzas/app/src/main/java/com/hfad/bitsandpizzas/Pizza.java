@@ -1,7 +1,9 @@
 package com.hfad.bitsandpizzas;
 
 /**
- * Created by davidg on 04/05/2017.
+ *
+ * @author davidg
+ * @date 04/05/2017
  */
 
 public class Pizza {

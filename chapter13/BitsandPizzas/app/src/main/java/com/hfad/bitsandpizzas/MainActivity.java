@@ -86,6 +86,8 @@ public class MainActivity extends AppCompatActivity {
                     return new PastaFragment();
                 case 3:
                     return new StoresFragment();
+                default:
+                    break;
             }
             return null;
         }
@@ -101,6 +103,8 @@ public class MainActivity extends AppCompatActivity {
                     return getResources().getText(R.string.pasta_tab);
                 case 3:
                     return getResources().getText(R.string.store_tab);
+                default:
+                    break;
             }
             return null;
         }
