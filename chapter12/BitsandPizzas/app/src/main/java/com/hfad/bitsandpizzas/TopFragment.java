@@ -11,6 +11,7 @@ import android.view.ViewGroup;
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
  * create an instance of this fragment.
+ * @author Administrator
  */
 public class TopFragment extends Fragment {
     @Override

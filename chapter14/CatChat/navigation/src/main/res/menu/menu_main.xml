@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@+id/group_main">
+        <item
+            android:id="@+id/item0"
+            android:icon="@android:drawable/ic_menu_call"
+            android:title="item0"
+            app:showAsAction="ifRoom" />
+        <item
+            android:id="@+id/item1"
+            android:icon="@android:drawable/sym_call_incoming"
+            android:title="item1"
+            app:showAsAction="ifRoom" />
+        <item
+            android:id="@+id/item2"
+            android:icon="@android:drawable/sym_call_missed"
+            android:title="item2"
+            app:showAsAction="ifRoom" />
+        <item
+            android:id="@+id/item3"
+            android:icon="@android:drawable/sym_call_outgoing"
+            android:title="item3"
+            app:showAsAction="ifRoom" />
+    </group>
+
+</menu>

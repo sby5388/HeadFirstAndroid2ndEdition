@@ -24,7 +24,8 @@ public class OrderActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // TODO: 2019/3/7  这样写不好的地方在于：通过某一个接入口(非MainActivity 进入该活动时，返回键或者homeUp时
-        // 不一定会回到MainActivity，而是关闭当前，返回调用者的界面
+        //  不一定会回到MainActivity，而是关闭当前，返回调用者的界面
+        //  如果要实现返回到MainActivity，就是在清单文件中配置parentActivity
         if (android.R.id.home == item.getItemId()) {
             finish();
             return true;

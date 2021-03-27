@@ -5,10 +5,12 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 public class OrderActivity extends AppCompatActivity {
+    public static final String TAG = "OrderActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,11 @@ public class OrderActivity extends AppCompatActivity {
         CharSequence text = "Your order has been updated";
         int duration = Snackbar.LENGTH_SHORT;
         Snackbar snackbar = Snackbar.make(findViewById(R.id.coordinator), text, duration);
+        // TODO: 2021/3/18 设置
+        final View snackbarView = snackbar.getView();
+        final int minimumWidth = snackbarView.getMinimumWidth();
+        Log.d(TAG, "onClickDone: minimumWidth = " + minimumWidth);
+        snackbarView.setMinimumWidth(800);
         snackbar.setAction("Undo",
                 new View.OnClickListener() {
                     @Override

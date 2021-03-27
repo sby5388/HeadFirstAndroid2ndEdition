@@ -38,11 +38,11 @@ public class StopwatchFragment extends Fragment implements View.OnClickListener 
                              Bundle savedInstanceState) {
         View layout = inflater.inflate(R.layout.fragment_stopwatch, container, false);
         runTimer(layout);
-        Button startButton = (Button)layout.findViewById(R.id.start_button);
+        Button startButton = (Button) layout.findViewById(R.id.start_button);
         startButton.setOnClickListener(this);
-        Button stopButton = (Button)layout.findViewById(R.id.stop_button);
+        Button stopButton = (Button) layout.findViewById(R.id.stop_button);
         stopButton.setOnClickListener(this);
-        Button resetButton = (Button)layout.findViewById(R.id.reset_button);
+        Button resetButton = (Button) layout.findViewById(R.id.reset_button);
         resetButton.setOnClickListener(this);
         return layout;
     }
@@ -103,11 +103,12 @@ public class StopwatchFragment extends Fragment implements View.OnClickListener 
         handler.post(new Runnable() {
             @Override
             public void run() {
-                int hours = seconds/3600;
-                int minutes = (seconds%3600)/60;
-                int secs = seconds%60;
+                int hours = seconds / 3600;
+                int minutes = (seconds % 3600) / 60;
+                int secs = seconds % 60;
                 String time = String.format(Locale.getDefault(),
-                        "%d:%02d:%02d", hours, minutes, secs); timeView.setText(time);
+                        "%d:%02d:%02d", hours, minutes, secs);
+                timeView.setText(time);
                 if (running) {
                     seconds++;
                 }

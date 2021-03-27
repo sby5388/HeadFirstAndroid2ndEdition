@@ -15,11 +15,9 @@ import android.widget.ListView;
  * A simple {@link Fragment} subclass.
  */
 public class WorkoutListFragment extends ListFragment {
-    static interface Listener {
-        void itemClicked(long id);
-    };
-
     private Listener listener;
+
+    ;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,7 +37,7 @@ public class WorkoutListFragment extends ListFragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        this.listener = (Listener)context;
+        this.listener = (Listener) context;
     }
 
     @Override
@@ -47,5 +45,9 @@ public class WorkoutListFragment extends ListFragment {
         if (listener != null) {
             listener.itemClicked(id);
         }
+    }
+
+    static interface Listener {
+        void itemClicked(long id);
     }
 }

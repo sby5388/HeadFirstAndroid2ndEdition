@@ -19,8 +19,6 @@ public class WorkoutListFragment extends ListFragment {
         void itemClicked(long id);
     }
 
-    ;
-
     private Listener listener;
 
     @Override
@@ -39,12 +37,15 @@ public class WorkoutListFragment extends ListFragment {
     }
 
     @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+    }
+
+    @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         if (context instanceof Listener) {
             this.listener = (Listener) context;
-        } else {
-            throw new RuntimeException("context !instanceof Listener");
         }
     }
 

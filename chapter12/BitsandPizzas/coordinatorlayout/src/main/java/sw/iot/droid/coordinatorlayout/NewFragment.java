@@ -20,7 +20,7 @@ public class NewFragment extends Fragment {
         view.findViewById(R.id.button_new).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getContext().startActivity(new Intent(getContext(), NewActivity.class));
+                requireContext().startActivity(new Intent(getContext(), NewActivity.class));
             }
         });
         return view;

@@ -1,11 +1,12 @@
 package com.hfad.workout;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity implements WorkoutListFragment.Listener {
+    public static final String TAG = "chap09";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,8 +16,8 @@ public class MainActivity extends AppCompatActivity implements WorkoutListFragme
 
     @Override
     public void itemClicked(long id) {
-        Intent intent = new Intent(this, DetailActivity.class);
-        intent.putExtra(DetailActivity.EXTRA_WORKOUT_ID, (int)id);
+        Log.d(TAG, "itemClicked: id = " + id);
+        final Intent intent = DetailActivity.newIntent(this, (int) id);
         startActivity(intent);
     }
 }

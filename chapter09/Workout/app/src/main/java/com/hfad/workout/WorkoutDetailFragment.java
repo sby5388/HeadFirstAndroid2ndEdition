@@ -2,6 +2,7 @@ package com.hfad.workout;
 
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,9 +23,16 @@ public class WorkoutDetailFragment extends Fragment {
     }
 
     @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+    }
+
+
+    @Override
     public void onStart() {
         super.onStart();
-        View view = getView();
+        // TODO: 2021/3/17 动态传递参数的，不能在onViewCreated 中来处理。 更好的方式是不使用xml来固定Fragment
+        final View view = getView();
         if (view != null) {
             TextView title = (TextView) view.findViewById(R.id.textTitle);
             Workout workout = Workout.workouts[(int) workoutId];

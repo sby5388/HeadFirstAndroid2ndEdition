@@ -15,11 +15,9 @@ public class NewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new);
 
-        Toolbar toolBar = findViewById(R.id.toolBar);
+        final Toolbar toolBar = findViewById(R.id.toolBar);
         setSupportActionBar(toolBar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
     }
 
     @Override

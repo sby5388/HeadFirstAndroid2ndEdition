@@ -1,1 +1,2 @@
 include ':app'
+rootProject.name = "chap11 Workout"
